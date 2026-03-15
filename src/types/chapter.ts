@@ -4,4 +4,5 @@ export interface ChapterMeta {
   description: string
   slug: string
   date: string
+  wordCount: number
 }
