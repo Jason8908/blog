@@ -47,6 +47,7 @@ export const meta: ChapterMeta = {
   description: "",
   slug: "${slug}",
   date: "${today}",
+  wordCount: 0,
 }
 `
 
@@ -54,6 +55,7 @@ const indexContent = `import { meta } from "./meta"
 import Section from "@/components/ui/Section"
 import Heading from "@/components/ui/Heading"
 import Prose from "@/components/ui/Prose"
+import ReadingTime from "@/components/ui/ReadingTime"
 
 export default function ${componentName}() {
   return (
@@ -61,6 +63,7 @@ export default function ${componentName}() {
       <Section>
         <Heading level={1}>Chapter {meta.chapter}: {meta.title}</Heading>
         <p className="mt-2 text-sm text-muted-foreground">{meta.date}</p>
+        <ReadingTime wordCount={meta.wordCount} />
       </Section>
 
       <Section>
