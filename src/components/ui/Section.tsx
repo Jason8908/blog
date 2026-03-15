@@ -7,7 +7,7 @@ interface SectionProps {
 
 export default function Section({ children, className }: SectionProps) {
   return (
-    <section className={cn("py-8", className)}>
+    <section className={cn("py-8 space-y-4", className)}>
       {children}
     </section>
   )
